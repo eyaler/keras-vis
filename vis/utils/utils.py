@@ -321,10 +321,11 @@ def normalize(array, min_value=0., max_value=1.):
     Returns:
         The array normalized to range between (min_value, max_value)
     """
-    arr_min = np.min(array)
-    arr_max = np.max(array)
-    normalized = (array - arr_min) / (arr_max - arr_min + K.epsilon())
-    return (max_value - min_value) * normalized + min_value
+    return array
+    #arr_min = np.min(array)
+    #arr_max = np.max(array)
+    #normalized = (array - arr_min) / (arr_max - arr_min + K.epsilon())
+    #return (max_value - min_value) * normalized + min_value
 
 
 class _BackendAgnosticImageSlice(object):
