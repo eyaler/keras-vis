@@ -167,7 +167,7 @@ def visualize_cam_with_losses(input_tensor, losses, seed_input, penultimate_laye
 
     # For numerical stability. Very small grad values along with small penultimate_output_value can cause
     # w * penultimate_output_value to zero out, even for reasonable fp precision of float32.
-    grads = grads / (np.max(grads) + K.epsilon())
+    #grads = grads / (np.max(grads) + K.epsilon())
 
     # Average pooling across all feature maps.
     # This captures the importance of feature map (channel) idx to the output.
